@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Restoran Pemadam Kelaparan</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #fff0f5;
+            color: #333;
+        }
+
+        nav {
+            background-color: #5e0b12;
+            padding: 12px;
+            text-align: center;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 8px;
+            cursor: pointer;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        h1, h2 {
+            color: #5e0b12;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            background-color: #efc7aa;
+            margin: 6px 0;
+            padding: 10px;
+            border-radius: 4px;
+        }
+
+        ul ul {
+            margin-top: 8px;
+        }
+
+        ul ul li {
+            background-color: #fff0f5;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .foto-menu {
+            width: 90px;
+            height: 90px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 3px solid #0b575e;
+            flex-shrink: 0;
+        }
+
+        .galeri img {
+            width: 200px;
+            margin: 8px;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a onclick="gantiHalaman('home')">Home</a> |
+        <a onclick="gantiHalaman('menu')">Menu</a> |
+        <a onclick="gantiHalaman('about')">About</a> | 
+        <a onclick="gantiHalaman('kontak')">Kontak</a>
+    </nav>
+
+    <!-- HOME -->
+    <div id="home" class="page active">
+        <h1>Restoran Pemadam Kelaparan</h1>
+        <p>
+            Selamat datang di Restoran Pemadam Kelaparan! Siap siaga 24 jam memadamkan
+            api kelaparan yang membara di perutmu. Tenang, di sini nggak ada acara
+            lapar-laparan, semua dijamin kenyang sampai puas.
+        </p>
+
+        <br>
+
+        <h2>Langkah Pemesanan: Prosedur Tanggap Darurat Lapar</h2>
+
+        <p>
+            Memesan makanan di sini gampang banget, semudah memanggil damkar
+            pas ada kebakaran. Ikuti 7 langkah prosedur darurat berikut biar
+            perutmu cepat aman terkendali.
+        </p>
+
+        <ol>
+            <li><strong>Bunyikan sirene lapar.</strong> Masuk ke restoran, lalu cari meja yang paling nyaman sebagai posko pemadaman kamu.</li>
+            <li><strong>Cek peta titik api.</strong> Baca daftar menu dengan teliti, tentukan seberapa besar api kelaparan yang harus dipadamkan.</li>
+            <li><strong>Pilih senjata pemadam.</strong> Tentukan pesananmu, misalnya satu makanan berat, satu minuman, dan dessert kalau masih ada bara.</li>
+            <li><strong>Hubungi petugas lapangan.</strong> Angkat tangan atau panggil pelayan, lalu sebutkan pesananmu dengan jelas dan lantang.</li>
+            <li><strong>Tunggu mobil pemadam datang.</strong> Duduk manis dan sabar, dapur kami lagi ngebut menyiapkan pesananmu.</li>
+            <li><strong>Semprot sampai padam!</strong> Begitu makanan tiba, langsung santap sampai api di perutmu benar-benar padam.</li>
+            <li><strong>Laporan selesai, saatnya bayar.</strong> Ke kasir dan bayar sesuai tagihan, misi pemadaman kelaparan pun resmi tuntas.</li>
+        </ol>
+    </div>
+
+    <!-- MENU -->
+    <div id="menu" class="page">
+        <h2>Kategori Menu: Peta Titik Api Kelaparan</h2>
+
+        <p>
+            Siaga satu! Cek dulu titik api kelaparanmu. Perut meraung minta diisi?
+            Terjunkan regu Makanan. Tenggorokan gosong kepanasan? Kerahkan regu
+            Minuman. Masih ada bara manis yang membandel? Dessert yang bakal
+            menumpasnya sampai habis. Semua udah kami kelompokkan biar kamu nggak
+            panik pas lagi kebakaran lapar.
+        </p>
+
+        <ul>
+            <li><strong>Makanan (Pemadam Api Besar)</strong>
+                <ul>
+                    <li>
+                        <img class="foto-menu" src="gprk.webp" alt="Ayam Geprek Males Antre">
+                        <span>Ayam Geprek Males Antre - &#36;1.20 (Rp 18.000)</span>
+                    </li>
+                    <li>
+                        <img class="foto-menu" src="nasgor.jpg" alt="Nasi Goreng Rebahan Dulu">
+                        <span>Nasi Goreng Rebahan Dulu - &#36;1.05 (Rp 16.000)</span>
+                    </li>
+                    <li>
+                        <img class="foto-menu" src="bakso.jpg" alt="Bakso Sabar Menanti Antrian">
+                        <span>Bakso Sabar Menanti Antrian - &#36;0.98 (Rp 15.000)</span>
+                    </li>
+                </ul>
+            </li>
+            <li><strong>Minuman (Penyemprot Dahaga)</strong>
+                <ul>
+                    <li>
+                        <img class="foto-menu" src="esteh.jpg" alt="Es Teh Manis Penawar Panas Hati">
+                        <span>Es Teh Manis Penawar Panas Hati - &#36;0.33 (Rp 5.000)</span>
+                    </li>
+                    <li>
+                        <img class="foto-menu" src="jus mangga.jpg" alt="Jus Mangga Semangat Pagi">
+                        <span>Jus Mangga Semangat Pagi - &#36;0.65 (Rp 10.000)</span>
+                    </li>
+                </ul>
+            </li>
+                       <li><strong>Dessert (Pemadam Bara Terakhir)</strong>
+                <ul>
+                    <li>
+                        <img class="foto-menu" src="pudding coklat.webp" alt="Puding Coklat Tenang Sejenak">
+                        <span>Puding Coklat Tenang Sejenak - &#36;0.52 (Rp 8.000)</span>
+                    </li>
+                    <li>
+                        <img class="foto-menu" src="eskrim vanilla.webp" alt="Es Krim Vanila Pendingin Suasana">
+                        <span>Es Krim Vanila Pendingin Suasana - &#36;0.59 (Rp 9.000)</span>
+                    </li>
+                </ul>
+            </li>
+
+        <video width="480" controls>
+            <source src="VIDEO RESTORAN PEMADAM KELAPARAN.mp4" type="video/mp4">
+            Browser kamu tidak mendukung tag video.
+        </video>
+    </div>
+
+    <!-- TENTANG -->
+    <div id="about" class="page">
+        <h2>Tentang Kami</h2>
+        <p>
+            Lahir dari suara perut yang nggak bisa dikompromi, Restoran Pemadam Kelaparan
+            hadir sebagai unit tanggap darurat rasa lapar pertama di kotamu. Kami percaya,
+            nggak ada masalah di dunia ini yang nggak bisa diredam dengan sepiring nasi
+            hangat dan sambal yang nampol.
+        </p>
+        <p>
+            Dari dapur kecil dengan mimpi besar, setiap menu kami diracik pakai bumbu rahasia
+            turun-temurun: cinta, sabar, dan sedikit drama biar makin nendang. Nggak peduli
+            kamu lagi baper, lapar mata, atau sekadar pengen healing lewat makanan, pintu
+            kami selalu terbuka 24 jam buat jadi tempat kamu "pulang".
+        </p>
+        <p>
+            Jadi kalau alarm laparmu udah bunyi kencang, jangan panik. Cukup datang, duduk
+            manis, dan biar kami yang urus sisanya. Karena di sini, kenyang bukan cuma
+            janji — itu garansi.
+        </p>
+    </div>
+
+    <!-- KONTAK -->
+    <div id="kontak" class="page">
+        <h2>Informasi Restoran</h2>
+        <p>
+            Alamat: Jl. Siaga Kenyang No. 21, Surabaya<br>
+            Jam Operasional: 10.00 - 22.00 WIB<br>
+            Telepon: (031) 4433-2211
+        </p>
+    </div>
+
+    <p>&copy; 2026 Restoran Pemadam Kelaparan. Seluruh hak cipta dilindungi.</p>
+
+    <script>
+        function gantiHalaman(id) {
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
