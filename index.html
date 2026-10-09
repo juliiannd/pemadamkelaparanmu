@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -227,6 +228,191 @@
             margin: 0 auto;
         }
 
+        /* ===== FORM REGISTRASI ===== */
+        .judul-form {
+            text-align: center;
+        }
+
+        .tabel-form {
+            width: auto;
+            margin: 16px auto;
+            background-color: transparent;
+        }
+
+        .tabel-form td {
+            border: none;
+            padding: 5px 8px;
+        }
+
+                /* ===== FORM PEMESANAN ===== */
+        .pesan-wrap {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        .pesan-sub {
+            text-align: center;
+            margin: 0 0 22px;
+        }
+
+        .pesan-box {
+            background-color: #fff;
+            border: 2px solid #efc7aa;
+            border-radius: 14px;
+            padding: 18px 20px;
+            margin-bottom: 16px;
+        }
+
+        .pesan-box h3 {
+            display: flex;
+            align-items: center;
+            margin: 0 0 14px;
+            color: #5e0b12;
+            font-size: 18px;
+        }
+
+        .pesan-box h3 span {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            margin-right: 10px;
+            border-radius: 50%;
+            background-color: #5e0b12;
+            color: #fff;
+            font-size: 14px;
+        }
+
+        .pesan-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .pesan-field {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 12px;
+        }
+
+        .pesan-field label {
+            margin-bottom: 4px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #5e0b12;
+        }
+
+        .pesan-box input[type="text"],
+        .pesan-box input[type="date"] {
+            padding: 9px 10px;
+            border: 1.5px solid #efc7aa;
+            border-radius: 8px;
+            background-color: #fff0f5;
+            font-family: inherit;
+            font-size: 15px;
+        }
+
+        .pesan-box input[type="text"]:focus,
+        .pesan-box input[type="date"]:focus {
+            outline: none;
+            border-color: #0b575e;
+        }
+
+        .pesan-kat {
+            margin: 12px 0 6px;
+            font-weight: bold;
+            color: #0b575e;
+        }
+
+        .pesan-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 12px;
+            margin-bottom: 6px;
+            border-radius: 8px;
+            background-color: #fff0f5;
+        }
+
+        .pesan-item .nama {
+            flex: 1;
+        }
+
+        .pesan-item .harga {
+            font-size: 13px;
+            color: #777;
+        }
+
+        .pesan-item input[type="text"] {
+            width: 52px;
+            padding: 6px;
+            text-align: center;
+        }
+
+        .pesan-judul-bayar {
+            margin: 4px 0 8px;
+            font-weight: bold;
+            color: #0b575e;
+        }
+
+        .pesan-bayar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+
+        .pesan-opsi {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 12px;
+            border: 2px solid #efc7aa;
+            border-radius: 10px;
+            background-color: #fff;
+            cursor: pointer;
+        }
+
+        .pesan-opsi:has(input:checked) {
+            border-color: #0b575e;
+            background-color: #eaf6f6;
+        }
+
+        .pesan-opsi img {
+            height: 26px;
+            max-width: 56px;
+            object-fit: contain;
+        }
+
+        .pesan-opsi b {
+            font-size: 14px;
+        }
+
+        .pesan-kirim {
+            display: block;
+            margin: 8px auto 0;
+            padding: 12px 36px;
+            border: none;
+            border-radius: 999px;
+            background-color: #5e0b12;
+            color: #fff;
+            font-family: inherit;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .pesan-kirim:hover {
+            background-color: #0b575e;
+        }
+
+        @media (max-width: 600px) {
+            .pesan-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         .page {
             display: none;
         }
@@ -242,7 +428,8 @@
         <a onclick="gantiHalaman('home')">Home</a> |
         <a onclick="gantiHalaman('menu')">Menu</a> |
         <a onclick="gantiHalaman('about')">About</a> |
-        <a onclick="gantiHalaman('kontak')">Kontak</a>
+        <a onclick="gantiHalaman('kontak')">Kontak</a> |
+        <a onclick="gantiHalaman('pemesanan')">Pemesanan</a>
     </nav>
 
     <!-- HOME -->
@@ -417,6 +604,130 @@
                 <td>(031) 4433-2211</td>
             </tr>
         </table>
+    </div>
+
+           <!-- PEMESANAN -->
+    <div id="pemesanan" class="page">
+        <div class="pesan-wrap">
+            <h2 class="judul-form">Form Pemesanan</h2>
+            <p class="pesan-sub">Isi data di bawah, pilih menu favoritmu, lalu kirim. Perut aman, dompet tenang.</p>
+
+            <form action="#" method="post">
+
+                <div class="pesan-box">
+                    <h3><span>1</span>Data Pemesan</h3>
+                    <div class="pesan-field">
+                        <label for="nama_lengkap">Nama Lengkap</label>
+                        <input type="text" id="nama_lengkap" name="nama_lengkap" placeholder="Contoh: Ananda">
+                    </div>
+                    <div class="pesan-grid">
+                        <div class="pesan-field">
+                            <label for="no_hp">No. HP</label>
+                            <input type="text" id="no_hp" name="no_hp" placeholder="08xxxxxxxxxx">
+                        </div>
+                        <div class="pesan-field">
+                            <label for="tgl_booking">Tanggal Booking</label>
+                            <input type="date" id="tgl_booking" name="tgl_booking">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pesan-box">
+                    <h3><span>2</span>Pilih Paket Menu</h3>
+
+                    <div class="pesan-kat">Makanan</div>
+                    <div class="pesan-item">
+                        <input type="checkbox" name="menu" value="Ayam Geprek">
+                        <span class="nama">Ayam Geprek Males Antre</span>
+                        <span class="harga">Rp 18.000</span>
+                        <input type="text" name="jml_geprek" placeholder="Jml">
+                    </div>
+                    <div class="pesan-item">
+                        <input type="checkbox" name="menu" value="Nasi Goreng">
+                        <span class="nama">Nasi Goreng Rebahan Dulu</span>
+                        <span class="harga">Rp 16.000</span>
+                        <input type="text" name="jml_nasgor" placeholder="Jml">
+                    </div>
+                    <div class="pesan-item">
+                        <input type="checkbox" name="menu" value="Bakso">
+                        <span class="nama">Bakso Sabar Menanti Antrian</span>
+                        <span class="harga">Rp 15.000</span>
+                        <input type="text" name="jml_bakso" placeholder="Jml">
+                    </div>
+
+                    <div class="pesan-kat">Minuman</div>
+                    <div class="pesan-item">
+                        <input type="checkbox" name="menu" value="Es Teh">
+                        <span class="nama">Es Teh Manis Penawar Panas Hati</span>
+                        <span class="harga">Rp 5.000</span>
+                        <input type="text" name="jml_esteh" placeholder="Jml">
+                    </div>
+                    <div class="pesan-item">
+                        <input type="checkbox" name="menu" value="Jus Mangga">
+                        <span class="nama">Jus Mangga Semangat Pagi</span>
+                        <span class="harga">Rp 10.000</span>
+                        <input type="text" name="jml_jus" placeholder="Jml">
+                    </div>
+
+                    <div class="pesan-kat">Dessert</div>
+                    <div class="pesan-item">
+                        <input type="checkbox" name="menu" value="Puding Coklat">
+                        <span class="nama">Puding Coklat Tenang Sejenak</span>
+                        <span class="harga">Rp 8.000</span>
+                        <input type="text" name="jml_puding" placeholder="Jml">
+                    </div>
+                    <div class="pesan-item">
+                        <input type="checkbox" name="menu" value="Es Krim Vanila">
+                        <span class="nama">Es Krim Vanila Pendingin Suasana</span>
+                        <span class="harga">Rp 9.000</span>
+                        <input type="text" name="jml_eskrim" placeholder="Jml">
+                    </div>
+                </div>
+
+                <div class="pesan-box">
+                    <h3><span>3</span>Pilihan Pembayaran</h3>
+
+                    <div class="pesan-judul-bayar">Kartu Debit/Kredit</div>
+                    <div class="pesan-bayar">
+                        <label class="pesan-opsi">
+                            <input type="radio" name="bayar" value="Visa">
+                            <img src="visa.png" alt="" onerror="this.style.display='none'">
+                            <b>Visa</b>
+                        </label>
+                        <label class="pesan-opsi">
+                            <input type="radio" name="bayar" value="Mastercard">
+                            <img src="mastercard.png" alt="" onerror="this.style.display='none'">
+                            <b>Mastercard</b>
+                        </label>
+                    </div>
+                    <div class="pesan-field">
+                        <label for="no_kartu">Nomor Kartu</label>
+                        <input type="text" id="no_kartu" name="no_kartu" maxlength="19" placeholder="xxxx xxxx xxxx xxxx">
+                    </div>
+
+                    <div class="pesan-judul-bayar">Dompet Digital</div>
+                    <div class="pesan-bayar">
+                        <label class="pesan-opsi">
+                            <input type="radio" name="bayar" value="GoPay">
+                            <img src="gopay.png" alt="" onerror="this.style.display='none'">
+                            <b>GoPay</b>
+                        </label>
+                        <label class="pesan-opsi">
+                            <input type="radio" name="bayar" value="OVO">
+                            <img src="ovo.png" alt="" onerror="this.style.display='none'">
+                            <b>OVO</b>
+                        </label>
+                        <label class="pesan-opsi">
+                            <input type="radio" name="bayar" value="DANA">
+                            <img src="dana.png" alt="" onerror="this.style.display='none'">
+                            <b>DANA</b>
+                        </label>
+                    </div>
+                </div>
+
+                <input type="submit" value="Kirim Pesanan" class="pesan-kirim">
+            </form>
+        </div>
     </div>
 
     <p>&copy; 2026 Restoran Pemadam Kelaparan. Seluruh hak cipta dilindungi.</p>
